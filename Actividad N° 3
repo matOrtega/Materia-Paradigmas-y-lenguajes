@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo Eventos</title>
+<style>
+  #btnI{
+    color: white;
+    background-color : green;
+    }
+  #btnD{
+    color: white;
+    background-color : red;
+    }
+  .cuerpo{
+    background-color: lightblue;
+    }
+</style>
+</head>
+<body class="cuerpo">
+
+<h2><center>Contador</center></h2>
+<center>
+<p id="contador">0</p>
+<button id="btnI">Incrementar</button>
+<button id="btnD">Descrementar</button>
+</center>
+<script>
+let contador = 0;
+
+document.getElementById("btnI").addEventListener("click", function() {
+    contador++;
+    document.getElementById("contador").textContent = contador;
+});
+document.getElementById("btnD").addEventListener("click", function() {
+  contador--;
+  document.getElementById("contador").textContent = contador;
+});
+</script>
+
+</body>
+</html>
